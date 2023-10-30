@@ -89,7 +89,6 @@
             this.Lbl_Upper.Name = "Lbl_Upper";
             this.Lbl_Upper.Size = new System.Drawing.Size(32, 23);
             this.Lbl_Upper.TabIndex = 5;
-            this.Lbl_Upper.Text = "label1";
             // 
             // Lbl_Lower
             // 
@@ -98,7 +97,6 @@
             this.Lbl_Lower.Name = "Lbl_Lower";
             this.Lbl_Lower.Size = new System.Drawing.Size(32, 23);
             this.Lbl_Lower.TabIndex = 6;
-            this.Lbl_Lower.Text = "label1";
             // 
             // Frm_DemonstracaoKey
             // 
@@ -113,6 +111,7 @@
             this.Controls.Add(this.Txt_msg);
             this.Controls.Add(this.Txt_Input);
             this.Name = "Frm_DemonstracaoKey";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Demonstração Evento Key";
             this.ResumeLayout(false);
             this.PerformLayout();

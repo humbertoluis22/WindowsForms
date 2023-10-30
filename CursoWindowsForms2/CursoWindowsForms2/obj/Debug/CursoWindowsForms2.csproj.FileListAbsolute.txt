@@ -8,3 +8,13 @@ C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWind
 C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\obj\Debug\CursoWindowsForms2.csproj.CoreCompileInputs.cache
 C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\obj\Debug\CursoWindowsForms2.exe
 C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\obj\Debug\CursoWindowsForms2.pdb
+C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\bin\Debug\CursoWindowsForms2.exe.config
+C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\bin\Debug\CursoWindowsForms2.exe
+C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\bin\Debug\CursoWindowsForms2.pdb
+C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\obj\Debug\CursoWindowsForms2.csproj.AssemblyReference.cache
+C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\obj\Debug\CursoWindowsForms2.Frm_HelloWord.resources
+C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\obj\Debug\CursoWindowsForms2.Properties.Resources.resources
+C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\obj\Debug\CursoWindowsForms2.csproj.GenerateResource.cache
+C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\obj\Debug\CursoWindowsForms2.csproj.CoreCompileInputs.cache
+C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\obj\Debug\CursoWindowsForms2.exe
+C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\obj\Debug\CursoWindowsForms2.pdb

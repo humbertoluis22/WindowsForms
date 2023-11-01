@@ -19,3 +19,4 @@ C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsFor
 C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\obj\Debug\CursoWindowsForms2.exe
 C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\obj\Debug\CursoWindowsForms2.pdb
 C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\obj\Debug\CursoWindowsForms2.Frm_DemonstracaoKey.resources
+C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\obj\Debug\CursoWindowsForms2.Frm_ValidaSenha.resources

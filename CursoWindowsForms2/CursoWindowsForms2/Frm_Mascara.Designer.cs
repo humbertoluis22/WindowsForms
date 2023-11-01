@@ -74,6 +74,7 @@
             this.Btn_Hora.TabIndex = 3;
             this.Btn_Hora.Text = "Hora";
             this.Btn_Hora.UseVisualStyleBackColor = true;
+            this.Btn_Hora.Click += new System.EventHandler(this.Btn_Hora_Click);
             // 
             // Btn_CEP
             // 
@@ -83,6 +84,7 @@
             this.Btn_CEP.TabIndex = 4;
             this.Btn_CEP.Text = "CEP";
             this.Btn_CEP.UseVisualStyleBackColor = true;
+            this.Btn_CEP.Click += new System.EventHandler(this.Btn_CEP_Click);
             // 
             // Btn_Moeda
             // 
@@ -92,6 +94,7 @@
             this.Btn_Moeda.TabIndex = 5;
             this.Btn_Moeda.Text = "Moeda";
             this.Btn_Moeda.UseVisualStyleBackColor = true;
+            this.Btn_Moeda.Click += new System.EventHandler(this.Btn_Moeda_Click);
             // 
             // Btn_Data
             // 
@@ -101,6 +104,7 @@
             this.Btn_Data.TabIndex = 6;
             this.Btn_Data.Text = "Data";
             this.Btn_Data.UseVisualStyleBackColor = true;
+            this.Btn_Data.Click += new System.EventHandler(this.Btn_Data_Click);
             // 
             // Btn_Senha
             // 
@@ -110,6 +114,7 @@
             this.Btn_Senha.TabIndex = 7;
             this.Btn_Senha.Text = "Senha";
             this.Btn_Senha.UseVisualStyleBackColor = true;
+            this.Btn_Senha.Click += new System.EventHandler(this.Btn_Senha_Click);
             // 
             // Btn_telefone
             // 
@@ -119,6 +124,7 @@
             this.Btn_telefone.TabIndex = 8;
             this.Btn_telefone.Text = "Telefone";
             this.Btn_telefone.UseVisualStyleBackColor = true;
+            this.Btn_telefone.Click += new System.EventHandler(this.Btn_telefone_Click);
             // 
             // Btn_VerConteudo
             // 
@@ -128,6 +134,7 @@
             this.Btn_VerConteudo.TabIndex = 9;
             this.Btn_VerConteudo.Text = "Ver Conteudo";
             this.Btn_VerConteudo.UseVisualStyleBackColor = true;
+            this.Btn_VerConteudo.Click += new System.EventHandler(this.Btn_VerConteudo_Click);
             // 
             // Frm_Mascara
             // 

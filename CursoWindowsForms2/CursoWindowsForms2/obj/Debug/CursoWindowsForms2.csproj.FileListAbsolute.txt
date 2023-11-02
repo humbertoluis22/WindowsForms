@@ -22,3 +22,5 @@ C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsFor
 C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\obj\Debug\CursoWindowsForms2.Frm_ValidaSenha.resources
 C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\obj\Debug\CursoWindowsForms2.Frm_Mascara.resources
 C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\obj\Debug\CursoWindowsForms2.Frm_ValidaCPF.resources
+C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\obj\Debug\CursoWindowsForms2.Frm_ValidaCPF2.resources
+C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\obj\Debug\CursoWindowsForms2.Frm_Principal.resources

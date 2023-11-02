@@ -16,5 +16,11 @@ namespace CursoWindowsForms2
         {
             InitializeComponent();
         }
+
+        private void Btn_DemostracaoKey_Click(object sender, EventArgs e)
+        {
+            Frm_DemonstracaoKey f = new Frm_DemonstracaoKey();
+            f.ShowDialog();
+        }
     }
 }

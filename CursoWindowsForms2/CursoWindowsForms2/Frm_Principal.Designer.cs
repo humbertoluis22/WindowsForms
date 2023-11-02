@@ -44,6 +44,7 @@
             this.Btn_DemostracaoKey.TabIndex = 0;
             this.Btn_DemostracaoKey.Text = "Demonstração Key";
             this.Btn_DemostracaoKey.UseVisualStyleBackColor = true;
+            this.Btn_DemostracaoKey.Click += new System.EventHandler(this.Btn_DemostracaoKey_Click);
             // 
             // Btn_HelloWord
             // 

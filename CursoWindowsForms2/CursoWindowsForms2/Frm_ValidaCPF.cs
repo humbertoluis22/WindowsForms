@@ -60,6 +60,7 @@ namespace CursoWindowsForms2
         private void Btn_Reset_Click(object sender, EventArgs e)
         {
             Msk_CPF.Text = "";
+            Lbl_Resultado.Text = "";
             
         }
 
@@ -69,7 +70,13 @@ namespace CursoWindowsForms2
             validaCpf = Valida(Msk_CPF.Text);
             if(validaCpf == true)
             {
-              
+                Lbl_Resultado.Text = "CPF VALIDO";
+                Lbl_Resultado.ForeColor = Color.Green;
+            }
+            else
+            {
+                Lbl_Resultado.Text = "Cpf INVALIDO";
+                Lbl_Resultado.ForeColor= Color.Red;
             }
         }
     }

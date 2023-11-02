@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Label Lbl_Resultado;
             this.Msk_CPF = new System.Windows.Forms.MaskedTextBox();
             this.Btn_Reset = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            Lbl_Resultado = new System.Windows.Forms.Label();
+            this.Lbl_Resultado = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Msk_CPF
@@ -42,15 +41,6 @@
             this.Msk_CPF.Name = "Msk_CPF";
             this.Msk_CPF.Size = new System.Drawing.Size(218, 20);
             this.Msk_CPF.TabIndex = 0;
-            // 
-            // Lbl_Resultado
-            // 
-            Lbl_Resultado.AutoSize = true;
-            Lbl_Resultado.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            Lbl_Resultado.Location = new System.Drawing.Point(12, 90);
-            Lbl_Resultado.Name = "Lbl_Resultado";
-            Lbl_Resultado.Size = new System.Drawing.Size(0, 27);
-            Lbl_Resultado.TabIndex = 1;
             // 
             // Btn_Reset
             // 
@@ -72,14 +62,23 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // Lbl_Resultado
+            // 
+            this.Lbl_Resultado.AutoSize = true;
+            this.Lbl_Resultado.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Resultado.Location = new System.Drawing.Point(12, 90);
+            this.Lbl_Resultado.Name = "Lbl_Resultado";
+            this.Lbl_Resultado.Size = new System.Drawing.Size(0, 27);
+            this.Lbl_Resultado.TabIndex = 4;
+            // 
             // Frm_ValidaCPF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(368, 154);
+            this.Controls.Add(this.Lbl_Resultado);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Btn_Reset);
-            this.Controls.Add(Lbl_Resultado);
             this.Controls.Add(this.Msk_CPF);
             this.Name = "Frm_ValidaCPF";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -95,5 +94,6 @@
         private System.Windows.Forms.MaskedTextBox Msk_CPF;
         private System.Windows.Forms.Button Btn_Reset;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label Lbl_Resultado;
     }
 }

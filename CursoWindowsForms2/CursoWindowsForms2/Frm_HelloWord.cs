@@ -19,7 +19,7 @@ namespace CursoWindowsForms2
 
         private void Btn_Sair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void Btn_MoficaLabel_Click(object sender, EventArgs e)

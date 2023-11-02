@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_HelloWord));
             this.Btn_Sair = new System.Windows.Forms.Button();
             this.Lbl_Titulo = new System.Windows.Forms.Label();
             this.Btn_MoficaLabel = new System.Windows.Forms.Button();
@@ -80,6 +81,7 @@
             this.Controls.Add(this.Btn_MoficaLabel);
             this.Controls.Add(this.Lbl_Titulo);
             this.Controls.Add(this.Btn_Sair);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_HelloWord";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hello word";

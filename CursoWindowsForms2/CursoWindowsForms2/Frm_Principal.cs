@@ -22,5 +22,35 @@ namespace CursoWindowsForms2
             Frm_DemonstracaoKey f = new Frm_DemonstracaoKey();
             f.ShowDialog();
         }
+
+        private void Btn_HelloWord_Click(object sender, EventArgs e)
+        {
+            Frm_HelloWord f = new Frm_HelloWord();
+            f.ShowDialog();
+        }
+
+        private void Btn_Mascara_Click(object sender, EventArgs e)
+        {
+            Frm_Mascara f = new Frm_Mascara();
+            f.ShowDialog();
+        }
+
+        private void Btn_ValidaCPF_Click(object sender, EventArgs e)
+        {
+            Frm_ValidaCPF f = new Frm_ValidaCPF();
+            f.ShowDialog();
+        }
+
+        private void Btn_ValidaCPF2_Click(object sender, EventArgs e)
+        {
+            Frm_ValidaCPF2 f = new Frm_ValidaCPF2();
+            f.ShowDialog();
+        }
+
+        private void Btn_ValidaSenha_Click(object sender, EventArgs e)
+        {
+            Frm_ValidaSenha f = new Frm_ValidaSenha();
+            f.ShowDialog();
+        }
     }
 }

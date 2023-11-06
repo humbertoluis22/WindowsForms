@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CursoWindowsForms2
+namespace CursoWindowsFormsBiblioteca
 {
-    internal class Cls_Uteis
+    public class Cls_Uteis
     {
-        public static  bool  Valida(string cpf)
+        public static bool Valida(string cpf)
         {
             int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
             int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };

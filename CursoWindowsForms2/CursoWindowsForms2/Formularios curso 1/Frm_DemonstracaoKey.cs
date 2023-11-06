@@ -33,5 +33,10 @@ namespace CursoWindowsForms2
             Lbl_Upper.Text = "";
             Lbl_Minus.Text = "";
         }
+
+        private void Frm_DemonstracaoKey_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

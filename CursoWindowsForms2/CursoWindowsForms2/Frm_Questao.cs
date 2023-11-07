@@ -10,22 +10,23 @@ using System.Windows.Forms;
 
 namespace CursoWindowsForms2
 {
-    public partial class Frm_HelloWord : Form
+    public partial class Frm_Questao : Form
     {
-        public Frm_HelloWord()
+        public Frm_Questao()
         {
             InitializeComponent();
         }
 
-        private void Btn_Sair_Click(object sender, EventArgs e)
+        private void Btn_OK_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.OK;
+            DialogResult = DialogResult.Yes;
             this.Close();
         }
 
-        private void Btn_MoficaLabel_Click(object sender, EventArgs e)
+        private void Btn_Cancel_Click(object sender, EventArgs e)
         {
-            Lbl_Titulo.Text = Txt_ConteudoLabel.Text;
+            DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 }

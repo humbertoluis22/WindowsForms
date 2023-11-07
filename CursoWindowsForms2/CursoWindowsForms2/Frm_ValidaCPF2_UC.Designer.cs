@@ -1,6 +1,6 @@
 ﻿namespace CursoWindowsForms2
 {
-    partial class Frm_ValidaCPF2_UC
+    partial class Frm_ValidaCpf2_UC
     {
         /// <summary> 
         /// Variável de designer necessária.
@@ -35,7 +35,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(237, 150);
+            this.button1.Location = new System.Drawing.Point(307, 147);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(111, 23);
             this.button1.TabIndex = 6;
@@ -45,7 +45,7 @@
             // 
             // Btn_Reset
             // 
-            this.Btn_Reset.Location = new System.Drawing.Point(237, 121);
+            this.Btn_Reset.Location = new System.Drawing.Point(307, 118);
             this.Btn_Reset.Name = "Btn_Reset";
             this.Btn_Reset.Size = new System.Drawing.Size(111, 23);
             this.Btn_Reset.TabIndex = 5;
@@ -55,21 +55,21 @@
             // 
             // Msk_CPF
             // 
-            this.Msk_CPF.Location = new System.Drawing.Point(4, 124);
+            this.Msk_CPF.Location = new System.Drawing.Point(74, 121);
             this.Msk_CPF.Mask = "000,000,000-00";
             this.Msk_CPF.Name = "Msk_CPF";
             this.Msk_CPF.Size = new System.Drawing.Size(218, 20);
             this.Msk_CPF.TabIndex = 4;
             // 
-            // Frm_ValidaCPF2_UC
+            // Frm_ValidaCpf2_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Btn_Reset);
             this.Controls.Add(this.Msk_CPF);
-            this.Name = "Frm_ValidaCPF2_UC";
-            this.Size = new System.Drawing.Size(379, 267);
+            this.Name = "Frm_ValidaCpf2_UC";
+            this.Size = new System.Drawing.Size(493, 289);
             this.ResumeLayout(false);
             this.PerformLayout();
 

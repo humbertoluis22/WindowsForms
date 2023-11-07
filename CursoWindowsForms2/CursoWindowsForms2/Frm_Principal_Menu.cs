@@ -32,6 +32,7 @@ namespace CursoWindowsForms2
         {
             Frm_HelloWord f = new Frm_HelloWord();
             f.ShowDialog();
+            
         }
 
         private void mascaraToolStripMenuItem_Click(object sender, EventArgs e)

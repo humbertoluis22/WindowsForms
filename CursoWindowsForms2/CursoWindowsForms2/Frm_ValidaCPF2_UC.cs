@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace CursoWindowsForms2
 {
-    public partial class Frm_ValidaCPF2_UC : UserControl
+    public partial class Frm_ValidaCpf2_UC : UserControl
     {
-        public Frm_ValidaCPF2_UC()
+        public Frm_ValidaCpf2_UC()
         {
             InitializeComponent();
         }
@@ -61,6 +61,8 @@ namespace CursoWindowsForms2
 
 
             }
+
+
         }
     }
 }

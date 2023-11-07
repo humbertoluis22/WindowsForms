@@ -74,7 +74,7 @@ namespace CursoWindowsForms2
         {
             ControleCPF += 1;
 
-            Frm_ValidaCPF U = new Frm_ValidaCPF();
+            Frm_ValidaCPF_UC U = new Frm_ValidaCPF_UC();
             TabPage TB = new TabPage();
             U.Dock = DockStyle.Fill;
             TB.Name = "Valida CPF " + ControleCPF;
@@ -88,7 +88,7 @@ namespace CursoWindowsForms2
         {
             ControleCPF2 += 1;
 
-            Frm_ValidaCPF2 U = new Frm_ValidaCPF2();
+            Frm_ValidaCpf2_UC U = new Frm_ValidaCpf2_UC();
             U.Dock = DockStyle.Fill;
             TabPage TB = new TabPage();
             

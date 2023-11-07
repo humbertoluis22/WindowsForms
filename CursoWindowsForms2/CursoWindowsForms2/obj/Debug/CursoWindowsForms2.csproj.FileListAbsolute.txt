@@ -38,3 +38,4 @@ C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsFor
 C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\obj\Debug\CursoWindowsForms2.Frm_ValidaSenha_UC.resources
 C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\obj\Debug\CursoWindowsForms2.Frm_Questao.resources
 C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\obj\Debug\CursoWindowsForms2.Frm_ArquivoImagem_UC.resources
+C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\obj\Debug\CursoWindowsForms2.Frm_Login.resources

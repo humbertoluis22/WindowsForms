@@ -226,5 +226,101 @@ namespace CursoWindowsForms2
             }
 
         }
+
+        private void Tbc_Aplicacoes_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Right)
+            {
+                var PosicaoX = e.X;
+                var PosicaoY = e.Y;
+
+
+                //MessageBox.Show("cliquei o botao da direita do mouse. A posição relativa foi (" + PosicaoX.ToString()+ " , " + PosicaoY + ")" );
+
+                var ContextMenu = new ContextMenuStrip();
+                var vToolTip001 = DesenhaItemMenu("Apagar a aba", "DeleteTab");
+                var vToolTip002 = DesenhaItemMenu("Apagar Todas as Esquerda", "DeleteLeft");
+                var vToolTip003 = DesenhaItemMenu("Apagar todas as direita", "DeleteRight");
+                var vToolTip004 = DesenhaItemMenu("Apagar Todas menos Esta", "DeleteAll");
+
+
+
+                ContextMenu.Items.Add(vToolTip001);
+                ContextMenu.Items.Add(vToolTip002);
+                ContextMenu.Items.Add(vToolTip003);
+                ContextMenu.Items.Add(vToolTip004);
+
+                ContextMenu.Show(this, new Point(PosicaoX, PosicaoY));
+
+                vToolTip001.Click += new System.EventHandler(vToolTip001_Click);
+                vToolTip002.Click += new System.EventHandler(vToolTip002_Click);
+                vToolTip003.Click += new System.EventHandler(vToolTip003_Click);
+                vToolTip004.Click += new System.EventHandler(vToolTip004_Click);
+
+
+            }
+            
+        }
+        void vToolTip001_Click(object sender1, EventArgs e1)
+        {
+            if (!(Tbc_Aplicacoes.SelectedTab == null))
+            {
+                Tbc_Aplicacoes.TabPages.Remove(Tbc_Aplicacoes.SelectedTab);
+            }
+        }
+
+
+        void vToolTip002_Click(object sender1, EventArgs e1)
+        {
+
+            if (!(Tbc_Aplicacoes.SelectedTab == null))
+            {           
+                ApagaEsquerda(Tbc_Aplicacoes.SelectedIndex);
+            }
+
+        }
+
+        void vToolTip003_Click(object sender1, EventArgs e1)
+        {
+            if (!(Tbc_Aplicacoes.SelectedTab == null))
+            {               
+                ApagaDireita(Tbc_Aplicacoes.SelectedIndex);
+              
+            }
+        }
+
+        void vToolTip004_Click(object sender1, EventArgs e1)
+        {
+            ApagaDireita(Tbc_Aplicacoes.SelectedIndex);
+            ApagaEsquerda(Tbc_Aplicacoes.SelectedIndex);
+        }
+
+
+        ToolStripMenuItem DesenhaItemMenu(string text, string nomeImagem)
+        {
+            var vToolTip = new ToolStripMenuItem();
+            vToolTip.Text = text;
+
+
+            Image MyImage = (Image)global::CursoWindowsForms2.Properties.Resources.ResourceManager.GetObject(nomeImagem);
+            vToolTip.Image = MyImage;
+
+            return vToolTip;
+        }
+
+        void ApagaDireita(int ItemSelecionado)
+        {
+            for (int i = Tbc_Aplicacoes.TabCount - 1; i > ItemSelecionado; i += -1)
+            {
+                Tbc_Aplicacoes.TabPages.Remove(Tbc_Aplicacoes.TabPages[i]);
+            }
+        }
+        void ApagaEsquerda(int ItemSelecionado)
+        {
+            for (int i = ItemSelecionado - 1; i >= 0; i += -1)
+            {
+                Tbc_Aplicacoes.TabPages.Remove(Tbc_Aplicacoes.TabPages[i]);
+            }
+        }
     }
 }

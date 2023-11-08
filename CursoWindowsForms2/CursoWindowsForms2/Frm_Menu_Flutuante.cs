@@ -49,7 +49,7 @@ namespace CursoWindowsForms2
 
             void vToolTip002_Click(object sender1, EventArgs e1)
             {
-                MessageBox.Show("selecionei a opçaõ do menu 0012");
+                MessageBox.Show("selecionei a opçaõ do menu 0002");
             }
 
 

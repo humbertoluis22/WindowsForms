@@ -291,8 +291,14 @@ namespace CursoWindowsForms2
 
         void vToolTip004_Click(object sender1, EventArgs e1)
         {
-            ApagaDireita(Tbc_Aplicacoes.SelectedIndex);
-            ApagaEsquerda(Tbc_Aplicacoes.SelectedIndex);
+            
+            if (!(Tbc_Aplicacoes.SelectedTab == null))
+            {
+                ApagaDireita(Tbc_Aplicacoes.SelectedIndex);
+                ApagaEsquerda(Tbc_Aplicacoes.SelectedIndex);
+            }
+
+
         }
 
 

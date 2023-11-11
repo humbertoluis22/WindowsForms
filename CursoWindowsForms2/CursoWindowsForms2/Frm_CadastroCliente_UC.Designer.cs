@@ -412,9 +412,9 @@
             this.Grp_Genero.Controls.Add(this.Rdb_Indefinido);
             this.Grp_Genero.Controls.Add(this.Rdb_Feminino);
             this.Grp_Genero.Controls.Add(this.Rdb_Masculino);
-            this.Grp_Genero.Location = new System.Drawing.Point(699, 111);
+            this.Grp_Genero.Location = new System.Drawing.Point(556, 111);
             this.Grp_Genero.Name = "Grp_Genero";
-            this.Grp_Genero.Size = new System.Drawing.Size(241, 88);
+            this.Grp_Genero.Size = new System.Drawing.Size(384, 88);
             this.Grp_Genero.TabIndex = 10;
             this.Grp_Genero.TabStop = false;
             // 

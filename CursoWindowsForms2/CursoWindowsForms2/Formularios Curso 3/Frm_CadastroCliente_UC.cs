@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CursoWindowsFormsBiblioteca.Classes;
+using System.ComponentModel.DataAnnotations;
 
 namespace CursoWindowsForms2
 {
@@ -125,7 +127,19 @@ namespace CursoWindowsForms2
 
         private void novoToolStripButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Efetuei um clique sobre o botao Novo ");
+            try
+            {
+                Cliente.Unit c = new Cliente.Unit();
+                c.Id = Txt_Codigo.Text;
+                c.ValidaClasse();
+                MessageBox.Show("classe inicializada sem erro", "Bytebank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch(ValidationException ex)
+            {
+                MessageBox.Show(ex.Message,"Byte Bank",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+
+
         }
 
         private void abrirToolStripButton_Click(object sender, EventArgs e)

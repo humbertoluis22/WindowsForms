@@ -66,6 +66,14 @@ namespace CursoWindowsForms2
             Cmb_Estados.Items.Add("São Paulo(SP)");
             Cmb_Estados.Items.Add("Sergipe(SE)");
             Cmb_Estados.Items.Add("Tocantins(TO)");
+
+
+
+            Tls_Principal.Items[0].ToolTipText = "Incluir na base de dados um novo cliente";
+            Tls_Principal.Items[1].ToolTipText = "capturar um cliente ja cadastrada na base";
+            Tls_Principal.Items[2].ToolTipText = "Atualize o cliente já existente";
+            Tls_Principal.Items[3].ToolTipText = "Apaga o cliente selecionado";
+            Tls_Principal.Items[4].ToolTipText = "Limpa dados da tela de entrada de  dados";
         }
 
         private void Lbl_CPF_Click(object sender, EventArgs e)
@@ -112,7 +120,32 @@ namespace CursoWindowsForms2
 
         private void Rdb_Feminino_CheckedChanged(object sender, EventArgs e)
         {
+     
+        }
 
+        private void novoToolStripButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Efetuei um clique sobre o botao Novo ");
+        }
+
+        private void abrirToolStripButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Efetuei um clique sobre o botao ABRIR ");
+        }
+
+        private void salvarToolStripButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Efetuei um clique sobre o botao SALVAR ");
+        }
+
+        private void ApagatoolStripButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Efetuei um clique sobre o botao EXCLUIR ");
+        }
+
+        private void LimpartoolStripButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Efetuei um clique sobre o botao LIMPAR ");
         }
     }
 }

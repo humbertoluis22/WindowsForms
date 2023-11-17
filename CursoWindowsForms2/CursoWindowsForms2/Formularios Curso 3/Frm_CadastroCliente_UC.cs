@@ -132,13 +132,18 @@ namespace CursoWindowsForms2
             {
                 Cliente.Unit c = new Cliente.Unit();
                 c = LeituraFormulario();
-            
                 c.ValidaClasse();
+                c.ValidaComplemento();  
                 MessageBox.Show("classe inicializada sem erro", "Bytebank", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch(ValidationException ex)
             {
                 MessageBox.Show(ex.Message,"Byte Bank",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Byte Bank", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -173,11 +178,11 @@ namespace CursoWindowsForms2
             C.NomeMae = Txt_NomeMae.Text;
             if (Chk_TemPai.Checked)
             {
-                C.TemPai = true;
+                C.NãoTemPai = true;
             }
             else
             {
-                C.TemPai = false;
+                C.NãoTemPai = false;
             }
             if (Rdb_Masculino.Checked)
             {

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CursoWindowsFormsBiblioteca.Classes;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.VisualBasic;
 
 namespace CursoWindowsForms2
 {
@@ -130,7 +131,8 @@ namespace CursoWindowsForms2
             try
             {
                 Cliente.Unit c = new Cliente.Unit();
-                c.Id = Txt_Codigo.Text;
+                c = LeituraFormulario();
+            
                 c.ValidaClasse();
                 MessageBox.Show("classe inicializada sem erro", "Bytebank", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -160,6 +162,70 @@ namespace CursoWindowsForms2
         private void LimpartoolStripButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Efetuei um clique sobre o botao LIMPAR ");
+        }
+
+        Cliente.Unit LeituraFormulario()
+        {
+            Cliente.Unit C = new Cliente.Unit();
+            C.Id= Txt_Codigo.Text;
+            C.Nome = Txt_NomeCliente.Text;
+            C.NomePai = Txt_NomePai.Text;
+            C.NomeMae = Txt_NomeMae.Text;
+            if (Chk_TemPai.Checked)
+            {
+                C.TemPai = true;
+            }
+            else
+            {
+                C.TemPai = false;
+            }
+            if (Rdb_Masculino.Checked)
+            {
+                C.genero = 0;
+            }
+            if (Rdb_Feminino.Checked)
+            {
+                C.genero = 1;
+            }
+            if (Rdb_Indefinido.Checked)
+            {
+                C.genero = 2;
+            }
+            C.Cpf = Txt_CPF.Text;
+            C.Cep = Txt_CEP.Text;
+            C.Logradouro = Txt_Logradouro.Text;
+            C.Complemento = Txt_Complemento.Text;   
+            C.Cidade = Txt_Cidade.Text;
+            C.Bairro = Txt_Bairro.Text;
+
+
+            if(Cmb_Estados.SelectedIndex < 0)
+            {
+                C.Estado = "";
+            }
+            else
+            {
+                C.Estado = Cmb_Estados.Items[Cmb_Estados.SelectedIndex].ToString();
+            }
+
+            C.Telefone = Txt_Telefone.Text;
+            C.Profissao = Txt_Profissao.Text;
+
+            if (Information.IsNumeric(Txt_RendaFamiliar.Text))
+            {
+                Double vRenda = Convert.ToDouble(Txt_RendaFamiliar.Text);
+                if (vRenda > 0)
+                {
+                    C.RendaFamiliar = 0;
+                }
+                else
+                {
+                    C.RendaFamiliar = vRenda;
+                }
+            }
+          
+
+            return C;
         }
     }
 }

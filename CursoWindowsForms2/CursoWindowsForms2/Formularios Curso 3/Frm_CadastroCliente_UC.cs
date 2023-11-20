@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CursoWindowsFormsBiblioteca.Classes;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.VisualBasic;
+using CursoWindowsFormsBiblioteca;
 
 namespace CursoWindowsForms2
 {
@@ -130,6 +131,7 @@ namespace CursoWindowsForms2
         {
             try
             {
+
                 Cliente.Unit c = new Cliente.Unit();
                 c = LeituraFormulario();
                 c.ValidaClasse();
@@ -231,6 +233,44 @@ namespace CursoWindowsForms2
           
 
             return C;
+        }
+
+        private void Txt_CEP_Leave(object sender, EventArgs e)
+        {
+            string vCep = Txt_CEP.Text;
+
+            if(vCep != "")
+            {
+                if(vCep.Length == 8)
+                {
+                    if (Information.IsNumeric(vCep))
+                    {
+                        var vJson = Cls_Uteis.GeraJSONCEP(vCep);
+
+                        Cep.unit CEP = new Cep.unit();
+                        CEP = Cep.DesSerializedClassunit(vJson);
+                        Txt_Logradouro.Text = CEP.logradouro;
+                        Txt_Bairro.Text = CEP.bairro;
+                        Txt_Cidade.Text = CEP.localidade;
+
+                        Cmb_Estados.SelectedIndex = -1;
+                        for(int i = 0; i <= Cmb_Estados.Items.Count - 1; i++)
+                        {
+
+                            var vPos = Strings.InStr(Cmb_Estados.Items[i].ToString(), "(" + CEP.uf + ")");
+                            if(vPos > 0)
+                            {
+                                Cmb_Estados.SelectedIndex = i;
+                            }
+
+                        }
+
+
+                    }
+                }
+            }
+
+
         }
     }
 }

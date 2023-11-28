@@ -80,7 +80,29 @@ namespace CursoWindowsForms2
             Tls_Principal.Items[4].ToolTipText = "Limpa dados da tela de entrada de  dados";
         }
 
-        private void Lbl_CPF_Click(object sender, EventArgs e)
+
+
+        private void LimparFornulario()
+        {
+            Txt_Codigo.Text = "";
+            Txt_Cidade.Text = "";
+            Txt_Bairro.Text = "";
+            Txt_CEP.Text = "";
+            Txt_Complemento.Text = "";
+            Txt_CPF.Text = "";
+            Cmb_Estados.SelectedIndex = -1;
+            Txt_Logradouro.Text = "";
+            Txt_NomeCliente.Text = "";
+            Txt_NomeMae.Text = "  ";
+            Txt_NomePai.Text = "  ";
+            Txt_Profissao.Text = "";
+            Txt_RendaFamiliar.Text = " ";
+            Txt_Telefone.Text = "";
+            Chk_TemPai.Checked = false;
+            Rdb_Masculino.Checked = true;
+
+        }
+        private void Txt_CPF_Click(object sender, EventArgs e)
         {
 
         }
@@ -90,7 +112,7 @@ namespace CursoWindowsForms2
 
         }
 
-        private void Lbl_NomeCliente_Click(object sender, EventArgs e)
+        private void Txt_NomeCliente_Click(object sender, EventArgs e)
         {
 
         }
@@ -100,7 +122,7 @@ namespace CursoWindowsForms2
 
         }
 
-        private void Lbl_Profissao_Click(object sender, EventArgs e)
+        private void Txt_Profissao_Click(object sender, EventArgs e)
         {
 
         }
@@ -135,8 +157,9 @@ namespace CursoWindowsForms2
                 Cliente.Unit c = new Cliente.Unit();
                 c = LeituraFormulario();
                 c.ValidaClasse();
-                c.ValidaComplemento();  
-                MessageBox.Show("classe inicializada sem erro", "Bytebank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                c.ValidaComplemento();
+                string clienteJson = Cliente.SerializedClassunit(c);
+                MessageBox.Show("Cliente vai ser incluido.O conteudo será:" + clienteJson, "Bytebank", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch(ValidationException ex)
             {
@@ -168,7 +191,7 @@ namespace CursoWindowsForms2
 
         private void LimpartoolStripButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Efetuei um clique sobre o botao LIMPAR ");
+            LimparFornulario();
         }
 
         Cliente.Unit LeituraFormulario()

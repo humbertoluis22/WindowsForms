@@ -96,7 +96,7 @@
             this.Lbl_CPF.Size = new System.Drawing.Size(35, 13);
             this.Lbl_CPF.TabIndex = 0;
             this.Lbl_CPF.Text = "label1";
-            this.Lbl_CPF.Click += new System.EventHandler(this.Lbl_CPF_Click);
+//            this.Lbl_CPF.Click += new System.EventHandler(this.Lbl_CPF_Click);
             // 
             // Txt_CPF
             // 
@@ -115,7 +115,7 @@
             this.Lbl_NomeCliente.Size = new System.Drawing.Size(35, 13);
             this.Lbl_NomeCliente.TabIndex = 2;
             this.Lbl_NomeCliente.Text = "label1";
-            this.Lbl_NomeCliente.Click += new System.EventHandler(this.Lbl_NomeCliente_Click);
+ //           this.Lbl_NomeCliente.Click += new System.EventHandler(this.Lbl_NomeCliente_Click);
             // 
             // Txt_NomeCliente
             // 
@@ -259,7 +259,7 @@
             this.Lbl_Profissao.Size = new System.Drawing.Size(35, 13);
             this.Lbl_Profissao.TabIndex = 22;
             this.Lbl_Profissao.Text = "label1";
-            this.Lbl_Profissao.Click += new System.EventHandler(this.Lbl_Profissao_Click);
+  //          this.Lbl_Profissao.Click += new System.EventHandler(this.Lbl_Profissao_Click);
             // 
             // Txt_Profissao
             // 

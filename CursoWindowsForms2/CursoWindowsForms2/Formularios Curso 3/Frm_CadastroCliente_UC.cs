@@ -505,8 +505,43 @@ namespace CursoWindowsForms2
 
         private void Btn_Busca_Click(object sender, EventArgs e)
         {
-            Frm_Busca F = new Frm_Busca();
-            F.ShowDialog();
+
+
+            Fichario F = new Fichario("C:\\Users\\Humberto\\Desktop\\WindowsForms\\WindowsForms\\WindowsForms\\CursoWindowsForms2\\Fichario");
+            if (F.status)
+            {
+                List<string> List = new List<string>();
+                List = F.BuscarTodos();
+                if (F.status)
+                {
+                    List<List<string>> ListaBusca = new List<List<string>>();
+                    for(int i = 0; i<= List.Count - 1; i++)
+                    {
+                        Cliente.Unit C = Cliente.DesSerializedClassunit(List[i]);
+                        ListaBusca.Add(new List<string> { C.Id, C.Nome });
+                    }
+                    Frm_Busca FForm = new Frm_Busca(ListaBusca);
+                    FForm.ShowDialog();
+                    if(FForm.DialogResult == DialogResult.OK)
+                    {
+                        var idSelect = FForm.idSelect;
+                        string clienteJson = F.Buscar(idSelect);
+                        Cliente.Unit C = new Cliente.Unit();
+                        C = Cliente.DesSerializedClassunit(clienteJson);
+                        EscreveFormulario(C);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("ERR" + F.mensagem, "byteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }               
+
+            }
+            else
+            {
+                MessageBox.Show("ERR: " + F.mensagem, "Bytebank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+         
         }
     }
 }

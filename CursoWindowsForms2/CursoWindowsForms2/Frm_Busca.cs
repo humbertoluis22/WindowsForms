@@ -58,7 +58,8 @@ namespace CursoWindowsForms2
         private void salvarToolStripButton_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
-            idSelect = _ListaBusca[Lst_Busca.SelectedIndex][0];
+            ItemBox itemSelecionado = (ItemBox)Lst_Busca.Items[Lst_Busca.SelectedIndex];
+            idSelect = itemSelecionado.id;
             this.Close();
         }
 

@@ -161,33 +161,36 @@ namespace CursoWindowsForms2
                 c = LeituraFormulario();
                 c.ValidaClasse();
                 c.ValidaComplemento();
-                string clienteJson = Cliente.SerializedClassunit(c);
+                c.IncluirFicharioDB("Cliente");
+                MessageBox.Show("OK: indentificador incluido com sucesso", "ByteBank",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                
+                
+                // string clienteJson = Cliente.SerializedClassunit();
+                //Fichario F = new Fichario("C:\\Users\\Humberto\\Desktop\\WindowsForms\\WindowsForms\\WindowsForms\\CursoWindowsForms2\\Fichario");
+                //if (F.status)
+                //{
+                //    F.Incluir(c.Id, clienteJson);
+                //    if (F.status)
+                //    {
+                //        MessageBox.Show("OK: " + F.mensagem, "Bytebank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //    }
+                //    else
+                //    {
+                //        MessageBox.Show("ERR: " + F.mensagem, "Bytebank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                //    }
+                //}
+                //else
+                //{
+                //    MessageBox.Show("ERR: " + F.mensagem, "Bytebank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                //}
 
 
-                Fichario F = new Fichario("C:\\Users\\Humberto\\Desktop\\WindowsForms\\WindowsForms\\WindowsForms\\CursoWindowsForms2\\Fichario");
-                if (F.status)
-                {
-                    F.Incluir(c.Id, clienteJson);
-                    if (F.status)
-                    {
-                        MessageBox.Show("OK: " + F.mensagem, "Bytebank", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    }
-                    else
-                    {
-                        MessageBox.Show("ERR: " + F.mensagem, "Bytebank", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("ERR: " + F.mensagem, "Bytebank", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-
-
-
-                MessageBox.Show("Cliente vai ser incluido.O conteudo será:" + clienteJson, "Bytebank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               // MessageBox.Show("Cliente vai ser incluido.O conteudo será:" + clienteJson, "Bytebank", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch(ValidationException ex)
             {
@@ -214,7 +217,7 @@ namespace CursoWindowsForms2
                 {
 
                     Cliente.Unit C = new Cliente.Unit();
-                    C = C.BuscarFichario(Txt_Codigo.Text, "C:\\Users\\Humberto\\Desktop\\WindowsForms\\WindowsForms\\WindowsForms\\CursoWindowsForms2\\Fichario");
+                    C = C.BuscarFicharioDB(Txt_Codigo.Text,"Cliente");
                    if(C == null)
                     {
                         MessageBox.Show("identeficador não econtrado", "Byte Bank", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -265,7 +268,7 @@ namespace CursoWindowsForms2
                     c = LeituraFormulario();
                     c.ValidaClasse();
                     c.ValidaComplemento();
-                    c.AlterarFichario("C:\\Users\\Humberto\\Desktop\\WindowsForms\\WindowsForms\\WindowsForms\\CursoWindowsForms2\\Fichario");
+                    c.AlterarFicharioDB("Cliente");
                    
                     MessageBox.Show("OK: indentificador alterado com sucesso " , "Bytebank", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -325,24 +328,32 @@ namespace CursoWindowsForms2
             }
             else
             {
-                Cliente.Unit C = new Cliente.Unit();
-                C = C.BuscarFichario(Txt_Codigo.Text, "C:\\Users\\Humberto\\Desktop\\WindowsForms\\WindowsForms\\WindowsForms\\CursoWindowsForms2\\Fichario");
-                if (C == null)
+                try
                 {
-                    MessageBox.Show("identeficador não econtrado", "Byte Bank", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    EscreveFormulario(C);
-                    Frm_Questao Db = new Frm_Questao("question1", "Você quer excluir esse cliente? ");
-                    Db.ShowDialog();
-                    if (Db.DialogResult == DialogResult.Yes)
+                    Cliente.Unit C = new Cliente.Unit();
+                    //C = C.BuscarFichario(Txt_Codigo.Text, "C:\\WindowsForms\\Curso\\CursoWindowsForms\\Fichario");
+                    C = C.BuscarFicharioDB(Txt_Codigo.Text, "Cliente");
+                    if (C == null)
                     {
-                        C.ApagarFichario("C:\\Users\\Humberto\\Desktop\\WindowsForms\\WindowsForms\\WindowsForms\\CursoWindowsForms2\\Fichario");
-                        MessageBox.Show("OK: indentificador Apagado com sucesso ", "Bytebank", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        LimparFornulario();
+                        MessageBox.Show("Identificador não encontrado.", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
+                    else
+                    {
+                        EscreveFormulario(C);
+                        Frm_Questao Db = new Frm_Questao("icons8_question_mark_961", "Você quer excluir o cliente?");
+                        Db.ShowDialog();
+                        if (Db.DialogResult == DialogResult.Yes)
+                        {
+                            //C.ApagarFichario("C:\\WindowsForms\\Curso\\CursoWindowsForms\\Fichario");
+                            C.ApagarFicharioDB("Cliente");
+                            MessageBox.Show("OK: Indentificador apagado com sucesso", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LimparFornulario();
+                        }
+                    }
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
 
@@ -553,44 +564,42 @@ namespace CursoWindowsForms2
 
         private void Btn_Busca_Click(object sender, EventArgs e)
         {
-         
+
             try
             {
                 Cliente.Unit C = new Cliente.Unit();
-                List<string> List = new List<string>();
-                List = C.ListaFichario("C:\\Users\\Humberto\\Desktop\\WindowsForms\\WindowsForms\\WindowsForms\\CursoWindowsForms2\\Fichario");
-                if (List == null)
+                // List<string> List = new List<string>();
+                // List = C.ListaFichario("C:\\Users\\Humberto\\Desktop\\WindowsForms\\WindowsForms\\WindowsForms\\CursoWindowsForms2\\Fichario");
+                //if (List == null)
+                //{
+                //    MessageBox.Show("Base de dados esta vazia. Não existe nenhum identificador cadastrado", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //}
+                var ListaBusca = C.BuscarFicharioDBTodosDB("Cliente");
+                Frm_Busca FForm = new Frm_Busca(ListaBusca);
+                FForm.ShowDialog();
+                if (FForm.DialogResult == DialogResult.OK)
                 {
-                    MessageBox.Show("Base de dados esta vazia. Não existe nenhum identificador cadastrado", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    List<List<string>> ListaBusca = new List<List<string>>();
-                    for (int i = 0; i <= List.Count - 1; i++)
+                    //List<List<string>> ListaBusca = new List<List<string>>();
+                    //for (int i = 0; i <= List.Count - 1; i++)
+                    //{
+                    //    C = Cliente.DesSerializedClassunit(List[i]);
+                    //    ListaBusca.Add(new List<string> { C.Id, C.Nome });
+                    //}
+                    var idSelect = FForm.idSelect;
+                    C = C.BuscarFicharioDB(idSelect, "Cliente");
+                    if (C == null)
                     {
-                        C = Cliente.DesSerializedClassunit(List[i]);
-                        ListaBusca.Add(new List<string> { C.Id, C.Nome });
+                        MessageBox.Show("identeficador não econtrado", "Byte Bank", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    Frm_Busca FForm = new Frm_Busca(ListaBusca);
-                    FForm.ShowDialog();
-                    if (FForm.DialogResult == DialogResult.OK)
+                    else
                     {
-                        var idSelect = FForm.idSelect;
-                        C = C.BuscarFichario(idSelect, "C:\\Users\\Humberto\\Desktop\\WindowsForms\\WindowsForms\\WindowsForms\\CursoWindowsForms2\\Fichario");
-                        if (C == null)
-                        {
-                            MessageBox.Show("identeficador não econtrado", "Byte Bank", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        else
-                        {
-                            EscreveFormulario(C);
-                        }
-                           
+                        EscreveFormulario(C);
                     }
+
                 }
-
-
             }
+
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);

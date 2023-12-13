@@ -47,3 +47,5 @@ C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsFor
 C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\obj\Debug\CursoWindowsForms2.Frm_Busca.resources
+C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\bin\Debug\Databases\Fichario.mdf
+C:\Users\Humberto\Desktop\WindowsForms\WindowsForms\WindowsForms\CursoWindowsForms2\CursoWindowsForms2\bin\Debug\Databases\Fichario_log.ldf
